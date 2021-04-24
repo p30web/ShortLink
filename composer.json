@@ -1,0 +1,54 @@
+{
+    "name": "alirezap30web/shortlink",
+    "description": "Url shortener",
+    "version": "0.0.6",
+    "type": "library",
+    "keywords": [
+        "shorturl",
+        "php-shorturl",
+        "laravel-shorturl",
+        "laravel-urlshortener",
+        "urlshortener",
+        "url-shortener",
+        "php",
+        "laravel"
+    ],
+    "homepage": "https://github.com/p30web/ShortLink",
+    "require": {
+    	"php" : "^7.1",
+        "illuminate/config": "~5.5.0|~5.6.0|~5.7.0",
+        "illuminate/database": "~5.5.0|~5.6.0|~5.7.0",
+        "illuminate/support": "~5.5.0|~5.6.0|~5.7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4",
+        "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alirezap30web",
+            "email": "blackhat1520@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Ako\\Shorturl\\": "src/",
+            "Ako\\Shorturl\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+      "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "alirezap30web\\shortlink\\ShorturlServiceProvider"
+            ],
+            "aliases": {
+                "Shorturl": "alirezap30web\\shortlink\\Facades\\Shorturl"
+            }
+        }
+    }
+}
